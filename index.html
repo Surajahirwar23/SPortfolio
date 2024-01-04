@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SURAJ AHIRWAR</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"/>
@@ -13,8 +17,8 @@
   <body>
     <nav>
       <div class="navImage">
-        <img src="suraj.png.jpg" alt="" />
-        <h2>SURAJ AHIRWAR</h2>
+        <img src="/sources/profile.jpg" alt="" class="logoImg" />
+        <h2 class="logoText">SURAJ AHIRWAR</h2>
       </div>
 
       <ul id="nav__menu">
@@ -30,17 +34,26 @@
         <i class="uil uil-multiply close__icon"></i>
       </button>
     </nav>
+    <div class="scroll">
 
     <!-- ++++++++++++++++++++++++++++++ HERO SECTION +++++++++++++++++++++++++++  -->
+    <div class="socials">
+      <ul class="social__left">
+        <li><a href="https://instagram.com/realsuraj23?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/suraj-ahirwar-s2347?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="https://x.com/SurajAh75864769?t=OJp3cu8BaLX_hfyiRkv95w&s=08"><i class="fa-brands fa-square-twitter"></i></a></li>
+      </ul>
+    </div>
 
     <section class="hero__section">
       <div class="hero__container">
-        <h1 class="heading__name">HEY I'M SURAJ AHIRWAR</h1>
+        <h1 class="heading__name">HEY, I'M SURAJ AHIRWAR</h1>
         <p class="intro__para">
           A Frontend focused Web Developer building the Frontend of Websites and
           Web Applications that leads to the success of the overall product
         </p>
-        <button class="cv__btn default_btn">DOWNLOAD CV</button>
+        <button class="cv__btn default_btn" onclick="downloadResume()">DOWNLOAD CV</button>
       </div>
     </section>
 
@@ -98,13 +111,7 @@
       </div>
     </section>
 
-
-
-
-
           <!-- ++++++++++++++++++++++++++++++ CONTACT SECTION +++++++++++++++++++++++++++  -->
-
-     
 
      <section class="contact__section" id="contact">
       <div class="contact__container">
@@ -126,7 +133,7 @@
           </div>
           <div class="name__input">
             <label for="">Message</label>
-            <textarea name="Message" id="" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+            <textarea name="Message" id="" cols="10" rows="4" placeholder="Enter Your Message"></textarea>
           </div>
           <button type="submit" class="default_btn contact__btn submit">SUBMIT</button>
           
@@ -164,23 +171,31 @@
       </div>
     </footer>
 
-    <script>
+  </div>
+
+
+
+
+
+
+    <!-- <script>
       const openBtn = document.getElementById("open__btn");
 const closeBtn = document.getElementById("close__btn");
 const navMenu = document.getElementById("nav__menu");
 
-function openNav(){
+function openNav() {
     openBtn.style.display = "none";
     closeBtn.style.display = "block";
     navMenu.style.display = "block";
 }
 
-function closeNav(){
+function closeNav() {
     openBtn.style.display = "block";
     closeBtn.style.display = "none";
     navMenu.style.display = "none";
 }
-
-    </script>
+    </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="script.js"> </script>
   </body>
 </html>
