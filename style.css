@@ -1,3 +1,13 @@
+@font-face {
+    font-family: prot1;
+    src: url(./fonts/portfolio1\.ttf);
+}
+@font-face {
+    font-family: port2;
+    src: url(./fonts/portfolio2\ .ttf);
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -10,7 +20,8 @@ body{
     height: 100%;
     /* position: relative; */
     background-color: #EDEDED;
-    font-family: 'Poppins', sans-serif;
+    font-family : "Source Sans Pro", sans-serif;
+ 
 
 }
 
@@ -22,12 +33,18 @@ body{
     color: white;
     border-radius: 3px;
     cursor: pointer;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+}
+.default_btn:hover{
+    top: -5px;
 }
 
             /* ++++++++++++++++++++++++++++NAV+++++++++++++++++++++++++++ */
 nav{
     width: 100%;
-    height: 80px;
+    height: 90px;
     top: 0;
     background-color: white;
     display: flex;
@@ -35,6 +52,7 @@ nav{
     justify-content:space-between ;
     position: fixed;
     z-index: 11;
+    border-bottom: 1px solid rgb(201, 198, 198);
 }
 nav .navImage{
     display: flex;
@@ -53,10 +71,15 @@ nav .navImage img{
 nav .navImage:hover h2{
     color: blueviolet;
 }
-nav .navImage h2{
-    font-size: 1.2rem;
+nav .navImage .logoText{
+    font-size: 1.1rem;
     margin-left: 10px;
+    margin-top: 5px;
     transition: 0.2s;
+    letter-spacing: 1px;
+    font-family: "Source Sans Pro", sans-serif;
+
+
 }
 nav ul{
     display: flex;
@@ -71,7 +94,7 @@ nav ul li a{
     font-weight: 600;
     letter-spacing: 2px;
     transition: 0.1s;
-    padding: 12px 0;
+    padding: 2.5rem 0;
 }
 nav ul li a:hover{
     color: blueviolet;
@@ -88,9 +111,37 @@ nav .nav__btn{
  
 }
 
+
+
+
 /* <!-- ++++++++++++++++++++++++++++++ HERO SECTION +++++++++++++++++++++++++++  --> */
 
+.socials{
+    top: 17vh;
+    left: 0;
+    position: absolute;
+    z-index: 9;
+    background-color: #000;
+    border-radius: 5px;
 
+}
+.social__left{
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+.social__left li{
+    /* position: relative; */
+}
+.social__left li a{
+    font-size: 1.7rem;
+    color: #fff;
+    padding: 2px 4px;
+
+}
 
 .hero__section{
     width: 100%;
@@ -110,26 +161,30 @@ nav .nav__btn{
 }
 .hero__container .heading__name{
     font-size: 3.7rem;
-    width: 45vw;
+    width: 80vw;
     text-align: center;
-    line-height: 5.5rem;
+    line-height: 12vh;
     font-weight: 900;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
 }
 .hero__container .intro__para{
-    width: 66vw;
-    font-size: 1.5rem;
+    width: 70vw;
+    font-size: 1.4rem;
     text-align: center;
+    line-height: 2rem;
     padding: 2rem 0;
+    font-weight: 600;
+    font-family: "port2";
+    color: #605e5e;
 }
 .hero__container .cv__btn{
     padding: 1rem 1.9rem;
     letter-spacing: 1px;
     margin-top: 2rem;
-
 }
 
-  
-           
+       
             /* <!-- ++++++++++++++++++++++++++++++ ABOUT SECTION +++++++++++++++++++++++++++  --> */
 
 .about__section{
@@ -392,9 +447,9 @@ textarea {
         font-size: 3.2rem;
         width: 66vw;
         text-align: center;
-        line-height: 4rem;
+        line-height: 3.5rem;
         font-weight: 800;
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
     .hero__container .intro__para{
         width: 87vw;
@@ -408,11 +463,13 @@ textarea {
         margin-top: 3rem;
     
     }
+    .social__left{
+        display: none;
+    }
     .about__text::after{
         top: 6.5rem;
     }
  }                      
-
 
 
                             /* ++++++++++++++++++++++++++++ MIDEA QUERY OF (600PX) +++++++++++++++++++++++++++ */
@@ -506,6 +563,7 @@ textarea {
 .social__links{
     width: 60%;
 }
+
  }
 
 
@@ -542,57 +600,28 @@ textarea {
 }
 
 
-
                      /* ++++++++++++++++++++++++++++ CONTACT FORM SECTION +++++++++++++++++++++++++++ */
  
 
-label {
-    color: #666;
+ label {
     font-size: 1rem;
-    letter-spacing: 1px;
     font-weight: 700;
-    margin-bottom: 1rem;
-    margin-top: rem;
-    display: block;
-    text-align: left;
 }
 input {
-    color: #333;
-    width: 100%;
-    border: 1px solid #ebebeb;
+    padding: 1rem;
     font-size: 1rem;
-    letter-spacing: 0;
-    background: #f0f0f0;
-    border-radius: 5px;
-    font-weight: 600;
 }
-textarea {
-    resize: none;
-    color: #333;
-    width: 100%;
-    border: 1px solid #ebebeb;
-    font-size: 1.3rem;
-    letter-spacing: 0;
-    background: #f0f0f0;
-    border-radius: 5px;
-    font-weight: 600;
+ textarea {
+    font-size: 1rem;
 }
 .submit{
-    display: inline-block;
     font-size: 1.3rem;
-    padding: 1rem 2.7rem;
     width: 100%;
-    text-align: center;
 }
-.contact__form-container {
-    box-shadow: rgba(100,100,111,.2) 0 7px 29px 0;
-    background: #fff;
-    padding: 3rem;
-    margin-top: rem;
-    width: 95%;
-    border-radius: 5px;
-    margin: 2rem auto 0 auto;
+ .contact__form-container { 
+    padding: 1rem 0.8rem;
 }
+
 
      
                      /* ++++++++++++++++++++++++++++ FOOTER SECTION +++++++++++++++++++++++++++ */
@@ -613,9 +642,9 @@ textarea {
     width: 100%;
 }
 .social__list{
-    display: flex;
+     display: flex;
     justify-content: center;
-    text-align: center;
+    text-align: center; 
     gap: 2rem;
 }
 }
