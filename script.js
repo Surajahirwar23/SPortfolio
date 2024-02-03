@@ -14,22 +14,7 @@ function closeNav() {
     navMenu.style.display = "none";
 }
 
-function downloadResume() {
-    var resumePath = '28sep resume.pdf';
 
-
-    var link = document.createElement('a');
-    
-    link.href = resumePath;
-
-    link.download = 'sources/suraj_Resume.pdf';
-
-    document.body.appendChild(link);
-
-    link.click();
-
-    document.body.removeChild(link);
-}
 
 const scroll = new LocomotiveScroll({
     el: document.querySelector('.scroll'),
